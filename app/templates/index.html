@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FF Projections</title>
+
+    </head>
+    <body>
+        <h1>Fantasy Football Projections for RUFF</h1>
+        <hr>
+        {% for game in Games %}
+        <table>
+            <tr><th> {{game.gameName}} </th></tr>
+            <tr><td style = "width:350px">{{game.teamHome.name}}</td><td style="padding-left: 15px">{{game.teamHome.odds}}%</td></tr>
+            <tr><td style = "padding-bottom: 25px; width:350px">{{game.teamAway.name}}</td><td style="padding-left: 15px; padding-bottom: 25px">{{game.teamAway.odds}}%</td></tr>
+            <tr> </tr>
+        {% endfor %}
+        </table>
+        <hr>
+    <i>Last Updated: {{time}}</i>
+    </body>
+</html>
